@@ -1,3 +1,14 @@
+terraform {
+  backend "remote" {
+    hostname = "app.terraform.io"
+    organization = "SomeCloudDude"
+
+    workspaces {
+      name = "vpc-test"
+    }
+  }
+}
+
 data "vault_generic_secret" "creds" {
   vault_addr = "https://vault.someclouddude.com:8200"
   path = "aws/kv/someclouddude"
