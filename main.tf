@@ -9,8 +9,11 @@ terraform {
   }
 }
 
-data "vault_generic_secret" "creds" {
+provider "vault" {
   vault_addr = "https://vault.someclouddude.com:8200"
+}
+
+data "vault_generic_secret" "creds" {
   path = "aws/kv/someclouddude"
 }
 
