@@ -2,7 +2,7 @@ terraform {
   backend "remote" {
     token = "zp3j0bEhwVvQJw.atlasv1.XMtyrxcSOisNTvGRIww8wugyZSUOw0jIMzL1BXzXIqJD7aUq5xwVMyXXXgjj731pwLI"
     hostname = "app.terraform.io"
-    organization = "SomeCloudDude"
+    organization = "scd-tgw"
 
     workspaces {
       name = "vpc-test"
