@@ -10,7 +10,7 @@ terraform {
 }
 
 provider "vault" {
-  vault_addr = "https://vault.someclouddude.com:8200"
+  address = "https://vault.someclouddude.com:8200"
 }
 
 data "vault_generic_secret" "creds" {
